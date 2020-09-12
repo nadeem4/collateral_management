@@ -1,0 +1,16 @@
+.table-head-wrapper {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  color: #362d7e;
+  width: 160px;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-right: 15px;
+  flex-direction: column;
+  .table-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+}

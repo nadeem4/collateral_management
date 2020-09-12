@@ -1,1 +1,137 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.overflow {
+  overflow: auto;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+.grey-bg {
+    background-color: #E3E3E3;
+}
+.pointer {
+    cursor: pointer;
+}
+.flex-row {
+    display: flex;
+}
+
+
+.img {
+    display: flex;
+    padding-left: 38px;
+    padding-right: 38px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    &.flex-col {
+        flex-direction: column;
+        margin-bottom: 18px;
+    }
+    .txt{
+        font-size: 13px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+}
+
+.card {
+    width:90%;
+    margin-top: 48px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    background-color: #fff
+} 
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #d4d4d4;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    background: #f7f9f9;
+}
+
+
+.heading {
+    font-weight: bold;
+    font-size: 36px;
+    text-align: left;
+    color: #362d7e;
+  }
+  .wrapper {
+    display: flex;
+    margin-top: 28px;
+    flex-direction: column;
+    .title {
+      font-weight: bold;
+      font-size: 15px;
+      text-align: left;
+      color: #362d7e;
+    }
+    .flex-row {
+      display: flex;
+      .value {
+        background-color: #f2f2f2;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 0.5px solid #fff;
+        &.width-96 {
+          width: 96px;
+          text-align: center;
+        }
+        &.width-110 {
+          width: 110px;
+        }
+        &.width-55 {
+          width: 55px;
+        }
+        .txt {
+          margin: auto;
+          color: #362d7e;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+
+  .table-header {
+    display: flex;
+    height: 70px;
+    padding: 0 22px;
+    justify-content: flex-end;
+    margin-bottom: 36px;
+    .right {
+      display: flex;
+      justify-content: space-evenly;
+      .img {
+        width: 100px;
+        justify-content: center;
+        padding: 0;
+        margin-left: 24px;
+        .txt{
+          color: #000000;
+          font-size: 14px;
+          text-align: left;
+          font-weight: 600;
+          margin: auto;
+        }
+      }
+    }
+  }
+  

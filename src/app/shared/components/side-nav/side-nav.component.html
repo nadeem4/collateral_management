@@ -1,0 +1,13 @@
+<div class="side-nav grey-bg">
+    <div class="side-nav-wrapper">
+        <ng-container *ngFor="let sideNavOption of sideNavOptions; let i = index">
+            <div class="side-nav-option pointer" [routerLink]="sideNavOption.route" routerLinkActive="active"
+                (click)="navigate(i)">
+                <div class="img flex-col pointer">
+                    <img [src]="selectedIndex == i ? sideNavOption.activeImage : sideNavOption.img" alt="" srcset="">
+                    <p class="txt">{{sideNavOption.txt}}</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

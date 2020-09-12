@@ -1,0 +1,38 @@
+<div class="content-header">
+    <h1 class="heading">Transfer</h1>
+    <div class="segement wrapper">
+        <p class="title">Segemet</p>
+        <div class="flex-row">
+            <ng-container *ngFor="let segement of segements">
+                <div class="value pointer width-55">
+                    <p class="txt">{{segement}}</p>
+                </div>
+            </ng-container>
+        </div>
+        
+    </div>
+    <div class="collateral_and_instrument flex-row">
+        <div class="collateral wrapper">
+            <p  class="title">Collateral</p>
+            <div class="flex-row">
+
+                <ng-container *ngFor="let collateral of collaterals">
+                    <div class="value pointer">
+                        <p class="txt">{{collateral}}</p>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="instrument wrapper">
+            <p  class="title">Instrument</p>
+            <div class="flex-row">
+                <ng-container *ngFor="let instrument of instruments">
+                    <div class="value pointer width-96">
+                        <p class="txt">{{instrument}}</p>
+                    </div>
+                </ng-container>
+            </div>
+           
+        </div>
+    </div>
+</div>
