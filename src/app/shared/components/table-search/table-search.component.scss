@@ -1,16 +1,39 @@
 .search {
   .input {
-   min-width: 78px;
+    width: 100px;
     height: 24px;
     border-radius: 3px;
     background: #fff;
     border: 1px solid #8b8a8a;
   }
   .txt {
-    margin-top: 20px;
+    margin-top: 5px;
     font-weight: normal;
     font-size: 14px;
     text-align: right;
     color: #f9e1d5;
+  }
+  .form-group.hidden {
+    width: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+  .custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
   }
 }

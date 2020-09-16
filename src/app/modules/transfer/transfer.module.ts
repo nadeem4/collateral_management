@@ -17,6 +17,14 @@ import { TransferDataCardHeaderComponent } from './components/transfer-data-card
 import { TransferDataTableComponent } from './components/transfer-data-table/transfer-data-table.component';
 import { TransferContentHeaderComponent } from './components/transfer-content-header/transfer-content-header.component';
 
+// ngrx modules
+import { StoreModule } from '@ngrx/store';
+import * as fromTransfer from './store/reducers/transfer.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { TransferEffects } from './store/effects/transfer.effects';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     TransferHomeComponent,
@@ -25,6 +33,17 @@ import { TransferContentHeaderComponent } from './components/transfer-content-he
     TransferDataTableComponent,
     TransferContentHeaderComponent,
   ],
-  imports: [CommonModule, TransferRoutingModule, SharedModule],
+  imports: [
+    CommonModule,
+    TransferRoutingModule,
+    SharedModule,
+    StoreModule.forFeature(
+      fromTransfer.transferFeatureKey,
+      fromTransfer.reducer
+    ),
+    EffectsModule.forFeature([TransferEffects]),
+    HttpClientModule,
+    
+  ],
 })
 export class TransferModule {}

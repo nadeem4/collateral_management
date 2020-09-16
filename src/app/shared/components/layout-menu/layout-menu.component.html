@@ -1,0 +1,11 @@
+<div class="flex-col menu-wrapper">
+    <div *ngFor="let layoutMenu of layoutMenus; let i = index">
+        <div class="flex-row menu">
+            <div class="img pointer" (click)="changeLayout(i)">
+                <img [src]="layoutMenu.img" alt="" srcset="">
+                <p class="txt">{{layoutMenu.text}}</p>
+            </div>
+           
+        </div>
+    </div>
+</div>

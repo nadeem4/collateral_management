@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TableHeaderComponent implements OnInit {
 
   @Input() text;
+  @Input() filterType
   constructor() { }
 
   ngOnInit(): void {

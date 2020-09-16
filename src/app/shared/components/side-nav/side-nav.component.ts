@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-nav',
@@ -9,7 +10,11 @@ export class SideNavComponent implements OnInit {
 
   selectedIndex = 5
   sideNavOptions: {img: string, txt: string, route: string, activeImage: string}[] =[]
-  constructor() { }
+  constructor( private activeRoute: ActivatedRoute) { 
+    
+    this.activeRoute.data.subscribe(console.log)
+
+  }
 
   ngOnInit(): void {
     this.sideNavOptions = [

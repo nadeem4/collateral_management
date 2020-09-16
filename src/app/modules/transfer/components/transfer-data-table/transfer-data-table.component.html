@@ -1,9 +1,9 @@
-<table>
-    <thead>
+<!-- <table>
+    <thead class="table-header">
         <tr>
             <app-check-box></app-check-box>
-            <app-table-header text="Symbol"></app-table-header>
-            <app-table-header text="ISIN"></app-table-header>
+            <app-table-header text="Symbol"  filterType="dateRange"></app-table-header>
+            <app-table-header text="ISIN" ></app-table-header>
             <app-table-header text="Custodian"></app-table-header>
             <app-table-header text="TM Code"></app-table-header>
             <app-table-header text="Client Code"></app-table-header>
@@ -15,84 +15,26 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <app-check-box></app-check-box>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-        </tr>
-        <tr>
-            <app-check-box></app-check-box>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-        </tr>
-        <tr>
-            <app-check-box></app-check-box>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-        </tr>
-        <tr>
-            <app-check-box></app-check-box>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-        </tr>
-        <tr>
-            <app-check-box></app-check-box>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-        </tr>
-        <tr>
-            <app-check-box></app-check-box>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-            <td> Lorem Ipsum </td>
-        </tr>
+        <ng-container *ngFor="let transfer of transferData$ | async">
+            <tr>
+                <app-check-box></app-check-box>
+                <td>  </td>
+                <td>  {{transfer.isin}} </td>
+                <td> {{transfer.custodian}} </td>
+                <td>  {{transfer.tmCode}} </td>
+                <td>  {{transfer.clientCode}} </td>
+                <td>  {{transfer.availableQty}} </td>
+                <td>  {{transfer.pendingRelease}} </td>
+                <td>  {{transfer.pendingTransfer}} </td>
+                <td>   </td>
+                <td>   </td>
+            </tr>
+        </ng-container>
     </tbody>
 
-</table>
+</table> -->
+
+<app-data-table
+[tableData$]="transferData$"
+[columnDefs]="columnDefs"
+></app-data-table>

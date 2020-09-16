@@ -1,4 +1,4 @@
 <div class="search">
-    <input class="input" type="text" placeholder="Search">
-    <p class="txt">Clear</p>
+    <input class="input" placeholder="Search" (ngModelChange)="valueChanged($event)" [(ngModel)]="text">
+    <p class="txt pointer">Clear</p>
 </div>

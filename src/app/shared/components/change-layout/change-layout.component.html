@@ -1,0 +1,16 @@
+<div cdkDropList cdkDropListOrientation="horizontal" class="flex-row" (cdkDropListDropped)="drop($event)">
+    <div class="flex-row cols" *ngFor="let col of cols; let i = index"   [ngClass]="{'width-0' : col.checkboxSelection == true }" cdkDrag>
+        <div class="flex-col col" *ngIf="col.headerName != undefined">
+            <div class="img flex-col top">
+                <img  src="/assets/images/reorder.svg" alt="" srcset="">
+                <p class="txt">{{col.headerName}}</p>
+            </div>
+           
+            <div class="img pointer flex-col hide-col" (click)="hideCol(i)">
+                <img src="/assets/images/sel-hide-cols.svg" alt="" srcset="">
+                <p class="txt">Hide Column</p>
+            </div>
+        </div>
+
+    </div>
+</div>

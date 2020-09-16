@@ -1,14 +1,14 @@
-<header class="table-header white-bg">
+<header class="card-header white-bg">
     <div class="right">
-        <div class="img pointer">
-            <img src="/assets/images/download-selected-orange.svg" alt="" srcset=""> 
+        <div class="img pointer" (click)="export(true)">
+            <img src="/assets/images/download-selected.png" alt="" srcset="" > 
             <p class="txt">Download Selected</p>
         </div>
-        <div class="img pointer">
-            <img src="/assets/images/download-filtered-orange.svg" alt="" srcset=""> 
+        <div class="img pointer" (click)="export(true)">
+            <img src="/assets/images/download-filtered.png" alt="" srcset=""> 
             <p class="txt">Download Filtered</p>
         </div>
-        <div class="img pointer">
+        <div class="img pointer" (click)="export(false)">
             <img src="/assets/images/download-all-orange.svg" alt="" srcset=""> 
             <p class="txt">Download All</p>
         </div>
@@ -20,9 +20,13 @@
             <img  src="/assets/images/clear-sort-orange.svg" alt="" srcset="">
             <p  class="txt">Clear Sort</p>
         </div>
-        <div class="img pointer">
+        <ng-template #popContent>
+            <app-layout-menu [layoutMenus]="layoutMenus"></app-layout-menu>
+        </ng-template>
+        <div class="img pointer" [ngbPopover]="popContent" placement="bottom">
             <img  src="/assets/images/layout-orange.svg" alt="" srcset="">
             <p class="txt">Layout</p>
         </div>
     </div>
 </header>
+

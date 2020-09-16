@@ -1,0 +1,13 @@
+<ag-grid-angular 
+  style="width: 100%; height: 500px;" 
+  class="ag-theme-alpine" 
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef" 
+  [rowData]="rowData" 
+  (gridReady)="onGridReady($event)"
+  [icons]="icons"
+  [frameworkComponents]="frameworkComponents"
+  headerHeight="50"
+  floatingFiltersHeight="80"
+  rowSelection="multiple"
+></ag-grid-angular>

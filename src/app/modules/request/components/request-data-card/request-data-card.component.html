@@ -1,6 +1,9 @@
 <div class="card">
-    <app-request-data-card-header></app-request-data-card-header>
+    <app-request-data-card-header *ngIf="!showChangeLayout"></app-request-data-card-header>
+    <app-change-layout-header *ngIf="showChangeLayout">
+    </app-change-layout-header>
     <div class="overflow">
-        <app-request-data-table></app-request-data-table>
+        <app-request-data-table *ngIf="!showChangeLayout" [columnDefs]="columnDefs"></app-request-data-table>
+        <app-change-layout *ngIf="showChangeLayout" [cols]="columnDefs"></app-change-layout>
     </div>
 </div>
